@@ -1,0 +1,32 @@
+server:
+  port: 8500
+  servlet:
+    context-path: /uaa
+
+spring:
+  application:
+    name: uaa-server
+  thymeleaf:
+    cache: false
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.226.39:8848
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+
+#暴露监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
