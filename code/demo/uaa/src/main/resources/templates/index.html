@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+<body>
+
+<div id="app">
+    <h1>{{ title }}</h1>
+    <form id="form1" method="post">
+        <p>用户名：<input name="username"/></p>
+        <p>密　码：<input name="password"/></p>
+        <p><input type="button" value="登录" @click="submitForm"></p>
+    </form>
+</div>
+
+
+<script src="/js/vue.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            title: '登录页面'
+        },
+        methods: {
+            submitForm: function () {
+
+
+
+            }
+        },
+        mounted: function () {
+
+        }
+    })
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: school-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.226.39:8848
