@@ -4,8 +4,6 @@ server:
 spring:
   application:
     name: uaa-server
-  thymeleaf:
-    cache: false
   cloud:
     nacos:
       discovery:

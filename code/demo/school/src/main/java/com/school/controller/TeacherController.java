@@ -20,6 +20,9 @@ import java.util.Map;
 public class TeacherController {
 
 
+    /**
+     * 老师权限
+     */
     @GetMapping("/math/grade")
     @PreAuthorize("hasAuthority('teacher')")
     public Object rs() {

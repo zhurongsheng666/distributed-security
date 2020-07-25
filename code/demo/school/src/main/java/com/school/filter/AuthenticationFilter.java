@@ -1,4 +1,4 @@
-package com.school.security.filter;
+package com.school.filter;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
@@ -6,11 +6,11 @@ import com.alibaba.fastjson.JSONObject;
 import com.common.uaa.entity.UserEntity;
 import com.common.utils.EncryptUtil;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -24,8 +24,8 @@ import java.io.IOException;
  * @Author: zhurongsheng
  * @Date: 2020/7/23 00:02
  */
-@Configuration
-public class TokenAuthenticationFilter extends OncePerRequestFilter {
+@Component
+public class AuthenticationFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,

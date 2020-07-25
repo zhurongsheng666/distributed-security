@@ -1,4 +1,4 @@
-package com.gateway.security.filter;
+package com.gateway.filter;
 
 import com.alibaba.fastjson.JSONObject;
 import com.common.utils.EncryptUtil;

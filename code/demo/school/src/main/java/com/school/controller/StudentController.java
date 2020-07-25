@@ -19,6 +19,9 @@ import java.util.Map;
 public class StudentController {
 
 
+    /**
+     * 老师权限或学生权限
+     */
     @GetMapping("/grade")
     @PreAuthorize("hasAnyAuthority('teacher','student')")
     public Object rs(HttpServletRequest request){
@@ -26,7 +29,6 @@ public class StudentController {
         map.put("张三",100);
         return map;
     }
-
 
 
 }
